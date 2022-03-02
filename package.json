@@ -5,7 +5,7 @@
     "node": "16.13.2"
   },
   "description": "Type or paste a text you have no idea how to respond to",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
