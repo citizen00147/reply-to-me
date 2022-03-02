@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 mongoose.connect(
-  `mongodb+srv://${process.env.MONGO_CLUSTER}.mongodb.net/${process.env.MONGO_DATABASE}`
+  `${process.env.MONGO_CLUSTER}.mongodb.net/${process.env.MONGO_DATABASE}?authSource=admin`
 );
 
 const db = mongoose.connection;
