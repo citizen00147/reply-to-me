@@ -1,0 +1,70 @@
+<%- include("partials/header") %>
+<h2>Share the texts you have no reply to</h2>
+<div class="dot-container">
+  <span class="dot-one">.</span>
+  <span class="dot-two">.</span>
+  <span class="dot-three">.</span>
+  <img src="images/bubble.svg" alt="" />
+</div>
+<div class="content-box">
+  <% texts.forEach(function(text){ %>
+  <p class="text-messages">
+    <%=text.content%>
+    <span class="user-reply"
+      ><em></em>
+        <%=text.time.toLocaleDateString()%> at
+        <%=text.time.toLocaleTimeString()%></em
+      ></span
+    >
+  </p>
+  <% }); %>
+
+  <form action="/" method="post">
+    <textarea
+      id="textBox"
+      name="textMessage"
+      placeholder="Type or paste your text here. Don't get too personal!"
+      cols="40"
+      rows="7"
+      maxlength="300"
+      required="true"
+    ></textarea>
+    <span id="count" class="char-count">
+      <script>
+        document.getElementById("textBox").onkeyup = function () {
+          document.getElementById("count").innerHTML =
+            " " + (300 - this.value.length);
+          if (document.getElementById("count").innerHTML < 100) {
+            document.getElementById("count").style.color = "#F05454";
+          } else {
+            document.getElementById("count").style.color = "#5f7adb";
+          }
+        };
+      </script>
+    </span>
+    <div class="button-container">
+      <button
+        id="myBtn"
+        class="submit-message"
+        type="submit"
+        name="button"
+        value=""
+      >
+        <i class="fas fa-paper-plane fa-1x" style="color: #dddddd"></i>
+      </button>
+    </div>
+  </form>
+  <hr />
+  <hr />
+  <details>
+    <summary>
+      <i class="fas fa-info info-icon" style="color: #5f7adb"></i>
+    </summary>
+    <p class="info-text">
+      This website is connected to a database, which is used to post your
+      messages to the chat box. Only your messages and time/date sent are
+      collected. I don't sell your data.
+    </p>
+  </details>
+</div>
+<%- include('partials/footer') %>
