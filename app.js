@@ -54,5 +54,5 @@ app.get("/changelog", function (req, res) {
 const port = process.env.PORT || 3000;
 
 app.listen(port, function () {
-  console.log("Server has started successfully");
+  console.log("Server has started successfully on " + port);
 });
