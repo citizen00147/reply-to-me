@@ -1,12 +1,12 @@
-# Reply for Me
+# Reply to Me
 
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 
-We've all been there: we sometimes reply with an emoji or a "like" when we don't know what to say with words. So, got a text message you don't know how to reply to? Share it!
+We've all been there: we sometimes reply with an emoji or a "like" when we don't know what to say with words. So, got a text message you don't know how to respond to? Share it!
 
-**Reply for Me** is still in early alpha
+**Reply to Me** is still in early alpha
 
 ---
 
