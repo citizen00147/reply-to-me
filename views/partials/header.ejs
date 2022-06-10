@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/8856597633.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-link" />
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,21 +25,47 @@
   <body>
     <header class="title">
       <h1><a id="#top" href="/">Reply to Me</a></h1>
-      <h1 style="color: #a2b2ee">|</h1>
+      <h1 id="divider">|</h1>
       <h1>
         <a href="https://github.com/citizen00147"
           ><i class="social fab fa-github-alt"></i
         ></a>
       </h1>
       <h1>
-        <a href="https://www.instagram.com/cmdme.dev/"
-          ><i class="social fab fa-instagram"></i
+        <a href="https://indieweb.social/@citizen00147"
+          ><i class="fab fa-mastodon"></i
         ></a>
       </h1>
       <h1>
-        <a href="https://twitter.com/citizen00147"
-          ><i class="social fab fa-twitter"></i
-        ></a>
+        <button class="theme-toggle-btn">
+          <i class="theme-toggle fas fa-adjust"></i>
+          <script>
+            const btn = document.querySelector(".theme-toggle-btn");
+            const theme = document.querySelector("#theme-link");
+            const currentTheme = localStorage.getItem("theme-link");
+
+            btn.addEventListener("click", function () {
+              if (theme.getAttribute("href") == "css/light-theme.css") {
+                theme.href = "css/dark-theme.css";
+                populateStorage();
+              } else {
+                theme.href = "css/light-theme.css";
+                populateStorage();
+              }
+              localStorage.setItem(
+                "theme-link",
+                document.querySelector("#theme-link").href
+              );
+            });
+
+            function populateStorage() {
+              localStorage.setItem(
+                "theme-link",
+                document.querySelector("#theme-link").href
+              );
+            }
+          </script>
+        </button>
       </h1>
     </header>
   </body>
