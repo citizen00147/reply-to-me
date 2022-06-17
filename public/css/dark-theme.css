@@ -1,3 +1,24 @@
+details,
+li,
+textarea,
+.about-text,
+.char-count,
+.link-container,
+.submit-message,
+.text-messages,
+.user-reply {
+  font-family: "Open Sans", sans-serif;
+}
+
+h2,
+h3,
+label,
+#aboutDetails,
+.about-close,
+.dot-container {
+  font-family: "Inter", sans-serif;
+}
+
 a {
   color: #5f7adb;
   text-decoration: none;
@@ -16,7 +37,6 @@ body {
 
 details {
   cursor: pointer;
-  font-family: "Open Sans", sans-serif;
   padding-bottom: 10px;
 }
 
@@ -26,6 +46,19 @@ details > summary {
 }
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+dialog {
+  border: none;
+  border-radius: 5px;
+  max-width: 400px;
+  background: rgb(46, 50, 57);
+  width: 85%;
+  animation: fade-in 0.5s;
+}
+
+dialog::backdrop {
+  background: rgba(38, 41, 43, 0.353);
 }
 
 footer {
@@ -62,21 +95,16 @@ h1 {
 
 h2 {
   color: #dddddd;
-  font-family: "Inter", sans-serif;
   font-size: 1.95rem;
   text-align: center;
   margin: 10px 10px 0 10px;
 }
 
-h3 {
+h3,
+label {
   color: #dddddd;
-  font-family: "Inter", sans-serif;
   font-size: 1rem;
   margin-left: 10px;
-}
-
-li {
-  font-family: "Open Sans", sans-serif;
 }
 
 p,
@@ -85,11 +113,10 @@ ul {
 }
 
 textarea {
-  background-color: #26292b;
+  background-color: rgb(38, 41, 43);
   border-radius: 5px;
   border: 0px solid #393e46;
   caret-color: #dddddd;
-  font-family: "Open Sans", sans-serif;
   font-size: 0.85rem;
   line-height: 1.5;
   outline: none;
@@ -111,10 +138,43 @@ img {
   margin-top: 17px;
 }
 
+#aboutDetails {
+  background: #5f7adb;
+  color: #dddddd;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: inherit;
+}
+
 #divider {
   color: #a2b2ee;
 }
 
+.about-text {
+  text-align: left;
+  font-size: 0.93rem;
+}
+
+.about-close {
+  background: #5f7adb;
+  color: #dddddd;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.about-btn-container {
+  display: flex;
+  justify-content: end;
+}
+
+dialog,
 .content-box,
 .info-text,
 .submit-message,
@@ -132,7 +192,6 @@ img {
 .char-count {
   display: flex;
   justify-content: flex-start;
-  font-family: "Open Sans", sans-serif;
   font-size: 0.95rem;
   margin-left: 45px;
   margin-top: 10px;
@@ -140,7 +199,7 @@ img {
 
 .content-box {
   max-width: 400px;
-  margin: 50px auto;
+  margin: 40px auto;
   background: #2e3239;
   border-radius: 10px;
   padding-top: 25px;
@@ -148,10 +207,15 @@ img {
   word-wrap: break-word;
 }
 
+.dialog-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
 .dot-container {
   display: flex;
   justify-content: center;
-  font-family: "Inter", sans-serif;
   color: #dddddd;
   font-size: 3rem;
 }
@@ -218,8 +282,13 @@ img {
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
 .link-container {
-  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   text-align: center;
 }
@@ -245,7 +314,6 @@ img {
   border-radius: 50%;
   background-color: #5f7adb;
   color: #393e46;
-  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   margin: 10px 0 10px;
   min-height: 50px;
@@ -276,7 +344,6 @@ img {
   padding: 7px;
   flex-direction: column;
   color: #dddddd;
-  font-family: "Open Sans", sans-serif;
   font-size: 0.93rem;
   font-weight: 300;
   margin: 0 40px 40px 40px;
@@ -305,7 +372,6 @@ img {
 .user-reply {
   display: flex;
   justify-content: flex-end;
-  font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
   line-height: 1.5;
   margin-top: 5px;

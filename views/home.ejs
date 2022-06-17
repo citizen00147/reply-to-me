@@ -1,5 +1,44 @@
 <%- include("partials/header") %>
 <h2>Share the Texts You Left on Read</h2>
+<div class="dialog-container">
+  <dialog id="about">
+    <form method="dialog">
+      <label>Info:</label>
+      <p class="about-text">
+        It's a social experiment of sorts. Communication has never been easier,
+        and we expect instant replies because we have the means to at our
+        fingertips. But sometimes it can be too much. So let's see some of the
+        texts you get! The messages can be weird, spam, wrong numbers, or even
+        texts that are just difficult to reply back to. Maybe we'll laugh, or
+        cry. Maybe we can relate. This is a place where texts go to die. Gone
+        but not forgotten.
+      </p>
+      <hr />
+      <p class="about-text"><b>What does it mean to leave on read?</b></p>
+      <p class="about-text">
+        It’s left on “read” because the other person sees their text has been
+        read but not responded to.
+      </p>
+      <p class="about-text"><b>Things to consider:</b></p>
+      <p class="about-text">
+        Don't get too personal & overshare information, even though we all love
+        a little gossip! Don't post information that would identify a person.
+      </p>
+      <div class="about-btn-container">
+        <button class="about-close" value="cancel">Close</button>
+      </div>
+    </form>
+  </dialog>
+  <button id="aboutDetails">What's this project about?</button>
+</div>
+<script>
+  const aboutButton = document.getElementById("aboutDetails");
+  const aboutProject = document.getElementById("about");
+
+  aboutButton.addEventListener("click", function () {
+    aboutProject.showModal();
+  });
+</script>
 <div class="dot-container">
   <span class="dot-one">.</span>
   <span class="dot-two">.</span>
@@ -11,14 +50,13 @@
   <p class="text-messages">
     "<%=text.content%>"
     <span class="user-reply"
-      ><em></em>
+      ><em>
         <%=text.time.toLocaleDateString()%> at
         <%=text.time.toLocaleTimeString()%></em
       ></span
     >
   </p>
   <% }); %>
-
   <form action="/" method="post">
     <textarea
       id="textBox"
@@ -62,7 +100,8 @@
     </summary>
     <p class="info-text">
       This website is connected to a database, which is used to post your
-      messages to the website. Only your messages and time/date sent are collected.
+      messages to the website. Only your messages and time/date sent are
+      collected.
     </p>
   </details>
 </div>
