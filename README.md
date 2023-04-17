@@ -43,12 +43,6 @@ Share your texts left on read! They can be spam, wrong numbers, or texts that ar
 
 ---
 
-### <p align="center">**Blog**</p>
-
-I like to write about the state of the internet and the user experience. I have no credentials, but I am opinionated. Sometimes I think I say useful things.<p align="center">[![hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com/@citizen00147)
-
----
-
 ### <p align="center">**Support**</p>
 
 Please reach out with any questions, comments or suggestions. Shoot me an email at developer@cmdme.dev<p align="center">[![https://ko-fi.com/cmdme](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V477WHS)
